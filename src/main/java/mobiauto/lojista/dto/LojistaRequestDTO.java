@@ -1,10 +1,8 @@
 package mobiauto.lojista.dto;
 
-
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-
-import lombok.*;
+import lombok.Data;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Pattern;
 
 @Data
 public class LojistaRequestDTO {

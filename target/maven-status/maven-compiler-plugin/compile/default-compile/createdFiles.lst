@@ -1,0 +1,14 @@
+mobiauto/lojista/repository/LojistaRepository.class
+mobiauto/lojista/model/Lojista.class
+mobiauto/lojista/controller/LojistaController.class
+mobiauto/lojista/dto/LojistaResponseDTO.class
+mobiauto/lojista/service/ViaCepClient.class
+mobiauto/lojista/dto/ViaCepResponse.class
+mobiauto/lojista/service/LojistaService.class
+mobiauto/config/FeignConfig.class
+mobiauto/lojista/dto/LojistaRequestDTO.class
+mobiauto/lojista/dto/Coordinates.class
+mobiauto/lojista/util/DistanceCalculator.class
+mobiauto/lojista/dto/NominatimResponse.class
+mobiauto/lojista/service/NominatimService.class
+mobiauto/App.class

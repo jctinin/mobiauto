@@ -1,16 +1,21 @@
 package mobiauto.lojista.model;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.*;
 
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
+@Builder
 public class Lojista {
 
     @Id
@@ -23,7 +28,7 @@ public class Lojista {
     @Pattern(regexp = "\\d{8}")
     private String cep;
     private String cidade;
-    private String estado;
+    private String uf;
 
     @NotBlank
     private String numero;

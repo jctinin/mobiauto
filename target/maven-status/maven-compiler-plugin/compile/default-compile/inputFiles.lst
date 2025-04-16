@@ -1,0 +1,14 @@
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/dto/LojistaRequestDTO.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/model/Lojista.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/App.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/service/LojistaService.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/service/ViaCepClient.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/dto/ViaCepResponse.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/config/FeignConfig.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/repository/LojistaRepository.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/dto/NominatimResponse.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/service/NominatimService.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/util/DistanceCalculator.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/controller/LojistaController.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/dto/Coordinates.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/dto/LojistaResponseDTO.java
