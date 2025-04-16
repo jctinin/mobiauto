@@ -3,11 +3,11 @@ package mobiauto.lojista.dto;
 import lombok.Data;
 
 @Data
-public class LojistaDistanciaDTO {
+public class LojistaResponseDTO {
 
-    private Long idLojista;
+    private Long id;
     private String nomeLojista;
     private String enderecoCompleto;
-    private String distanciaKm;
+    private Double distanciaKm;
 
 }

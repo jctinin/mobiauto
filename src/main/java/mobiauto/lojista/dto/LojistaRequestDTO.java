@@ -1,11 +1,13 @@
 package mobiauto.lojista.dto;
 
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
+
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+
 import lombok.*;
 
 @Data
-public class LojistaDTO {
+public class LojistaRequestDTO {
 
     @NotBlank(message = "Nome não pode ser vazio")
     private String nome;
@@ -16,5 +18,5 @@ public class LojistaDTO {
 
     @NotBlank(message = "Número não pode ser vazio")
     private String numero;
-     
+
 }

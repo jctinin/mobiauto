@@ -1,13 +1,23 @@
 package mobiauto;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+
 /**
  * Hello world!
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+@SpringBootApplication
+@EnableFeignClients
+@EnableCaching
+public class App {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+
+        SpringApplication.run(App.class, args);
+
     }
 }

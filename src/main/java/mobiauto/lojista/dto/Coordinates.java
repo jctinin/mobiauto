@@ -1,4 +1,4 @@
-package mobiauto.lojista.model;
+package mobiauto.lojista.dto;
 
 import lombok.*;
 

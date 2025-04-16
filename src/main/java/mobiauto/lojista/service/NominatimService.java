@@ -1,11 +1,12 @@
-package mobiauto.lojista.integration;
+package mobiauto.lojista.service;
 
 import org.springframework.cache.annotation.Cacheable;
 
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 
-import mobiauto.lojista.model.Coordinates;
+import mobiauto.lojista.dto.Coordinates;
+import mobiauto.lojista.dto.NominatimResponse;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 

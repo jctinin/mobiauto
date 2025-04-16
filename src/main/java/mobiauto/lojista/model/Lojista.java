@@ -1,8 +1,10 @@
 package mobiauto.lojista.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 
-import jakarta.validation.constraints.*;
 import lombok.*;
 
 @Entity
@@ -31,9 +33,9 @@ public class Lojista {
 
     @NotNull
     @Column(name = "longitude")
-    private String longitude;
+    private Double longitude;
     @NotNull
     @Column(name = "latitude")
-    private String latitude;
+    private Double latitude;
 
 }

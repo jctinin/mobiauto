@@ -1,4 +1,4 @@
-package mobiauto.lojista.integration;
+package mobiauto.lojista.dto;
 
 import lombok.Data;
 
