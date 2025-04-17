@@ -1,6 +1,7 @@
 package mobiauto.lojista.util;
 
 import mobiauto.lojista.dto.Coordinates;
+import mobiauto.usuario.model.Endereco;
 
 public class DistanceCalculator {
 
@@ -19,5 +20,16 @@ public class DistanceCalculator {
 
     return EARTH_RADIUS_KM * c;
   }
+
+
+  public static Coordinates toCoordinates(Endereco endereco) {
+    if (endereco == null) {
+        throw new IllegalArgumentException("Endereço não pode ser nulo");
+    }
+    if (endereco.getLatitude() == null || endereco.getLongitude() == null) {
+        throw new IllegalArgumentException("Endereço não possui coordenadas válidas");
+    }
+    return new Coordinates(endereco.getLatitude(), endereco.getLongitude());
+}
 
 }

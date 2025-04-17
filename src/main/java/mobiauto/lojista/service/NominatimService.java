@@ -22,8 +22,10 @@ public class NominatimService {
         .build();
   }
 
-  @Cacheable(value = "coordinatesCache", key = "{#address}")
-  public Mono<Coordinates> getCoordinates(String address) {
+  @Cacheable(value = "coordinatesCache", key = "{#cep, #numero}")
+  public Mono<Coordinates> getCoordinates(String cep, String numero) {
+    String address = String.format("%s, %s, Brasil", numero, cep);
+
 
     return webClient.get()
         .uri(urlBuilder -> urlBuilder
@@ -35,10 +37,29 @@ public class NominatimService {
         .bodyToMono(NominatimResponse[].class)
         .flatMapMany(Flux::fromArray)
         .next()
-        .map(result -> new Coordinates(Double.parseDouble(result.getLat()),
-            Double.parseDouble(result.getLon())))
+        .map(response -> new Coordinates(
+                    Double.parseDouble(response.getLat()),
+                    Double.parseDouble(response.getLon())
+        ))
         .switchIfEmpty(Mono.error(new RuntimeException("Endereço não encontrado: " + address)));
 
   }
+      // private Endereco mapearParaEndereco(NominatimResponse response) {
+      //   Endereco endereco = new Endereco();
+      //   endereco.setLatitude(Double.parseDouble(response.getLat()));
+      //   endereco.setLongitude(Double.parseDouble(response.getLon()));
+
+      //   String[] parts = response.getDisplayName().split(",");
+      //   if (parts.length > 0) {
+      //       endereco.setLogradouro(parts[0].trim());
+      //   }
+      //   if (parts.length > 1) {
+      //       endereco.setBairro(parts[1].trim());
+      //   }
+
+      //   return endereco;
+
+      // }
+
 
 }

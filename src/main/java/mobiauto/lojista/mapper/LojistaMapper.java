@@ -1,5 +1,6 @@
 package mobiauto.lojista.mapper;
 
+import mobiauto.lojista.dto.LojistaDistanciaDTO;
 import mobiauto.lojista.dto.LojistaResponseDTO;
 import mobiauto.lojista.model.Lojista;
 
@@ -9,8 +10,8 @@ public class LojistaMapper {
   public static LojistaResponseDTO toDTO(Lojista lojista) {
         return LojistaResponseDTO.builder()
             .id(lojista.getId())
-            .nome(lojista.getNome())
-            .endereco(formatarEndereco(lojista))
+            .nomeLojista(lojista.getNome())
+            .enderecoCompleto(formatarEndereco(lojista))
             .build();
     }
 

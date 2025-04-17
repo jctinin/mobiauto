@@ -1,8 +1,10 @@
 package mobiauto.lojista.dto;
 
+import lombok.Builder;
 import lombok.Data;
 
 @Data
+@Builder
 public class LojistaResponseDTO {
 
     private Long id;
