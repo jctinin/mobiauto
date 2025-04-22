@@ -1,5 +1,6 @@
 package mobiauto.lojista.service;
 
+import java.text.DecimalFormat;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -54,6 +55,10 @@ public class LojistaService {
   }
 
   public List<LojistaDistanciaDTO> buscarLojistasProximos(Long usuarioId) {
+    System.out.println("usuarioId: " + usuarioId);
+    if (usuarioId == null) {
+      throw new RuntimeException("ID do usuário não pode ser nulo");
+    }
 
     Usuario usuario = usuarioRepository.findById(usuarioId)
         .orElseThrow(() -> new RuntimeException("Usuário não encontrado"));
@@ -70,14 +75,23 @@ public class LojistaService {
   }
 
   private List<LojistaDistanciaDTO> calcularLojistasProximos(Coordinates origem) {
+    System.out.println("Coordenadas de origem: " + origem.getLatitude() + ", " + origem.getLongitude());
+
     return lojistaRepository.findAll().stream()
         .map(lojista -> {
-          double distancia = DistanceCalculator.calculate(
+          Double distancia = DistanceCalculator.calculate(
               origem,
               new Coordinates(lojista.getLatitude(), lojista.getLongitude()));
           return LojistaMapper.toDistanciaDTO(lojista, distancia);
         })
-        .sorted(Comparator.comparingDouble(LojistaDistanciaDTO::getDistanciaKm))
+        .sorted(Comparator.comparingDouble(lojista -> {
+          DecimalFormat df = new DecimalFormat("#.##");
+          String resultado = df.format(lojista.getDistanciaKm());
+          Double distancia = Double.parseDouble(resultado);
+          lojista.setDistanciaKm(distancia);
+          System.out.println("Distância: " + distancia);
+          return (Double.parseDouble(resultado));
+        }))
         .collect(Collectors.toList());
   }
 

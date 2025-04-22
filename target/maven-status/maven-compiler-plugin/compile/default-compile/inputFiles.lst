@@ -5,6 +5,7 @@
 /home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/mapper/LojistaMapper.java
 /home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/dto/NominatimResponse.java
 /home/jctinin/estudos/demo/src/main/java/mobiauto/usuario/dto/EnderecoDTO.java
+/home/jctinin/estudos/demo/src/main/java/mobiauto/config/SwaggerConfig.java
 /home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/service/NominatimService.java
 /home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/service/GeolocationServiceImpl.java
 /home/jctinin/estudos/demo/src/main/java/mobiauto/lojista/dto/LojistaDistanciaDTO.java
