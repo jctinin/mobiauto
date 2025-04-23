@@ -1,4 +1,3 @@
-mobiauto/unit/NominatimServiceTest.class
 mobiauto/integration/external/NominatimServiceIntegrationTest.class
 mobiauto/unit/UsuarioServiceTest.class
 mobiauto/integration/internal/LojistaInternalIntegrationTest.class

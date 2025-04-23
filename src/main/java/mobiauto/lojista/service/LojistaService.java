@@ -55,7 +55,6 @@ public class LojistaService {
   }
 
   public List<LojistaDistanciaDTO> buscarLojistasProximos(Long usuarioId) {
-    System.out.println("usuarioId: " + usuarioId);
     if (usuarioId == null) {
       throw new RuntimeException("ID do usuário não pode ser nulo");
     }
@@ -75,7 +74,6 @@ public class LojistaService {
   }
 
   private List<LojistaDistanciaDTO> calcularLojistasProximos(Coordinates origem) {
-    System.out.println("Coordenadas de origem: " + origem.getLatitude() + ", " + origem.getLongitude());
 
     return lojistaRepository.findAll().stream()
         .map(lojista -> {
@@ -89,13 +87,12 @@ public class LojistaService {
           String resultado = df.format(lojista.getDistanciaKm());
           Double distancia = Double.parseDouble(resultado);
           lojista.setDistanciaKm(distancia);
-          System.out.println("Distância: " + distancia);
           return (Double.parseDouble(resultado));
         }))
         .collect(Collectors.toList());
   }
 
-  // Serviço para teste da API ViaCep
+
   public ViaCepResponse buscaEndereco(String cep) {
 
     ViaCepResponse endereco = viaCepClient.buscaEndereco(cep);

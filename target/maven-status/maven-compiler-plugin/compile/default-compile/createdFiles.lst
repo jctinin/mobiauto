@@ -2,6 +2,7 @@ mobiauto/lojista/dto/LojistaResponseDTO$LojistaResponseDTOBuilder.class
 mobiauto/lojista/model/Lojista.class
 mobiauto/lojista/controller/LojistaController.class
 mobiauto/lojista/dto/LojistaResponseDTO.class
+mobiauto/lojista/dto/NominatimResponse$NominatimResponseBuilder.class
 mobiauto/config/SwaggerConfig.class
 mobiauto/lojista/service/GeolocationServiceImpl.class
 mobiauto/lojista/dto/ViaCepResponse.class

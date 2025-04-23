@@ -36,8 +36,6 @@ public class UsuarioService {
       throw new RuntimeException("CEP não encontrado");
     }
 
-    System.out.println("LOCALIDADE: "+ viaCepResponse.getLocalidade());
-
     enderecoUsuario.setLogradouro(viaCepResponse.getLogradouro());
     enderecoUsuario.setBairro(viaCepResponse.getBairro());
     enderecoUsuario.setCidade(viaCepResponse.getLocalidade());
@@ -48,8 +46,6 @@ public class UsuarioService {
 
       enderecoUsuario.setLatitude(coords.getLatitude());
       enderecoUsuario.setLongitude(coords.getLongitude());
-
-      // String enderecoCompleto = geolocationService.getFullAddressByCep(enderecoUsuario.getCep(), enderecoUsuario.getNumero());
 
     } catch (Exception e) {
       System.err.println("Erro ao obter coordenadas: " + e.getMessage());
@@ -79,7 +75,6 @@ public class UsuarioService {
 
     try{
       List<Usuario> usersList = usuarioRepository.findAll();
-      System.out.println("Lista de usuários: " + usersList);
     } catch (Exception e) {
       System.err.println("Erro ao listar usuários: " + e.getMessage());
       throw new RuntimeException("Erro ao listar usuários: " + e.getMessage());
