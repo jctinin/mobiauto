@@ -44,22 +44,6 @@ public class NominatimService {
         .switchIfEmpty(Mono.error(new RuntimeException("Endereço não encontrado: " + address)));
 
   }
-      // private Endereco mapearParaEndereco(NominatimResponse response) {
-      //   Endereco endereco = new Endereco();
-      //   endereco.setLatitude(Double.parseDouble(response.getLat()));
-      //   endereco.setLongitude(Double.parseDouble(response.getLon()));
-
-      //   String[] parts = response.getDisplayName().split(",");
-      //   if (parts.length > 0) {
-      //       endereco.setLogradouro(parts[0].trim());
-      //   }
-      //   if (parts.length > 1) {
-      //       endereco.setBairro(parts[1].trim());
-      //   }
-
-      //   return endereco;
-
-      // }
 
 
 }

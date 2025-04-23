@@ -27,8 +27,10 @@ mobiauto/lojista/dto/LojistaRequestDTO.class
 mobiauto/usuario/repository/UsuarioRepository.class
 mobiauto/usuario/dto/UsuarioRequestDTO.class
 mobiauto/lojista/model/Lojista$LojistaBuilder.class
+mobiauto/usuario/model/Endereco$EnderecoBuilder.class
 mobiauto/usuario/dto/UsuarioResponseDTO.class
 mobiauto/lojista/dto/NominatimResponse.class
 mobiauto/usuario/dto/UsuarioRequestDTO$UsuarioRequestDTOBuilder.class
 mobiauto/lojista/service/NominatimService.class
+mobiauto/lojista/dto/ViaCepResponse$ViaCepResponseBuilder.class
 mobiauto/App.class

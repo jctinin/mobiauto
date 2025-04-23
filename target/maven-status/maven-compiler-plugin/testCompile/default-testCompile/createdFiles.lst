@@ -1,1 +1,10 @@
-mobiauto/AppTest.class
+mobiauto/unit/NominatimServiceTest.class
+mobiauto/integration/external/NominatimServiceIntegrationTest.class
+mobiauto/unit/UsuarioServiceTest.class
+mobiauto/integration/internal/LojistaInternalIntegrationTest.class
+mobiauto/integration/external/ViaCepClientTest.class
+mobiauto/unit/LojistaServiceTest.class
+mobiauto/e2e/LojistaE2ETest.class
+mobiauto/integration/internal/UsuarioInternalIntegrationTest.class
+mobiauto/e2e/UsuarioE2ETest.class
+mobiauto/unit/GeolocationServiceImplTest.class

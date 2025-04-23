@@ -4,11 +4,17 @@ import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Embeddable;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import mobiauto.lojista.dto.Coordinates;
 
 @Embeddable
+@Builder
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Schema(description = "Modelo de Endereço")
 public class Endereco {
 
