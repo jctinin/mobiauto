@@ -52,5 +52,6 @@ O MobiAuto é uma plataforma que conecta:
 
 ### Instalação
 ```bash
+git clone https://github.com/jctinin/mobiauto.git
 cd mobiauto
 mvn clean install
